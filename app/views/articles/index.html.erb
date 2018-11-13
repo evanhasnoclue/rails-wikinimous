@@ -1,6 +1,8 @@
-<div class="container text-center">
-  <% @articles.each do |article| %>
-    <h1><%= link_to article.title, article_path(article.id)  %></h1>
-    <p><%= article.content %></p>
-  <% end %>
+<div class="wrapper">
+  <div class="container">
+    <% @articles.each do |article| %>
+      <h1><%= link_to article.title, article_path(article.id)  %></h1>
+      <p><%= article.content %></p>
+    <% end %>
+  </div>
 </div>

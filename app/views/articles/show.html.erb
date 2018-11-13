@@ -1,11 +1,24 @@
-<div class="container text-center">
-  <div class="header text-center">
-    <h1><%= @article.title %>
-      <%= link_to "Edit",edit_article_path(@article.id)  %>
-      <%= link_to "Delete",article_path(@article.id), method: :delete, data: {confirm: "Are you sure?"}  %>
-    </h1>
-  </div>
-  <div class="content text-center">
-    <p><%= @article.content %></p>
+<div class="wrapper">
+  <div class="container">
+    <div class="header">
+      <ul class="list-inline list-unstyled">
+        <li class="list-inline-item">
+          <h1><%= @article.title %></h1>
+        </li>
+        <li class="list-inline-item icon">
+          <%= link_to(edit_article_path(@article)) do %>
+            <i class='fas fa-edit'></i>
+            <% end %>
+        </li>
+        <li class="list-inline-item icon">
+          <%= link_to(article_path(@article.id), method: :delete, data: {confirm: "Are you sure?"}) do  %>
+          <i class='fas fa-trash-alt'></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <p><%= @article.content %></p>
+    </div>
   </div>
 </div>

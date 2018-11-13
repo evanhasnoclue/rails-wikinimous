@@ -1,3 +1,48 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: rgb(250,250,250);
+  color: rgb(240,240,240);
+  border: 2px solid rgb(255,255,255);
+  box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  p {
+    margin: 0 10px;
+  }
+}
+
+.wrapper {
+  background-color: white;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-round;
+}
+
+.container {
+  width: 600px;
+}
+
+.header {
+  border-bottom: 2px solid rgb(200,200,200);
+}
+
+.content .form-control {
+  height: 100px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
