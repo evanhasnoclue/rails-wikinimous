@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <div class="header text-center">
+    <h1><%= @article.title %>
+      <%= link_to "Edit",edit_article_path(@article.id)  %>
+      <%= link_to "Delete",article_path(@article.id), method: :delete, data: {confirm: "Are you sure?"}  %>
+    </h1>
+  </div>
+  <div class="content text-center">
+    <p><%= @article.content %></p>
+  </div>
+</div>
